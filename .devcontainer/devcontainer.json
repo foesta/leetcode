@@ -1,0 +1,29 @@
+{
+    "name": "GO: Leetcode",
+    "build": {
+        "dockerfile": "../.docker/Go.dockerfile",
+        "target": "devcontainer",
+        "context": "..",
+        "args": {
+        }
+    },
+    "runArgs": [
+        "--cap-add=IPC_LOCK",
+    ],
+    "extensions": [
+        "golang.go",
+        "ms-vscode.makefile-tools",
+        "waderyan.gitblame"
+    ],
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "Bash": {
+              "path": "/bin/bash"
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "Bash"
+    },
+    "containerEnv": {
+        "CGO_ENABLED": "0"
+    }
+}
